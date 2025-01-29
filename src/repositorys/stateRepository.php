@@ -11,37 +11,34 @@ class stateRepository extends Model
     {
         parent::__construct();
     }
-    public function find(string $number): bool {
-        $stmt = $this->prepare("SELECT number_user, type_information, additional_info FROM user_states WHERE number_user = :number_user LIMIT 1");
-        $stmt->bindValue(':number_user', $number);
+    public function find(string $phone): array|bool
+    {
+        $stmt = $this->prepare("SELECT id, type_state, phone FROM states WHERE phone = :phone LIMIT 1");
+        $stmt->bindValue(':phone', $phone);
         $stmt->execute();
+
         if ($stmt->rowCount() == 1) {
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            return $user;
+            return $stmt->fetch(PDO::FETCH_ASSOC);
         }
         return false;
     }
-     /**
-     * Add State
-     */
+
+
     public function add(array $datos): bool
     {
-        // $stmt = $this->prepare("INSERT INTO user_states (number_user, type_information, additional_info) VALUES (:number_user, :type_information, :additional_info)");
-        // $stmt->bindValue(':number_user', $datos['number']);
-        // $stmt->bindValue(':type_information', $datos['type']);
-        // $stmt->bindValue(':additional_info', $datos['additional_info']);
-        // return $stmt->execute();
-    }
-    /**
-     * Update State
-     */
-    public function update(array $datos): bool
-    {
-        // $stmt = $this->prepare("UPDATE user_states SET type_information = :type_information, additional_info = :additional_info WHERE number_user = :number_user");
-        // $stmt->bindValue(':number_user', $datos['number']);
-        // $stmt->bindValue(':type_information', $datos['type']);
-        // $stmt->bindValue(':additional_info', $datos['additional_info']);
-        // return $stmt->execute();
+        $stmt = $this->prepare("INSERT INTO states (type_state, phone) VALUES (:type_state, :phone)");
+        $stmt->bindValue(':phone', $datos['number']);
+        $stmt->bindValue(':type_state', $datos['type']);
+        return $stmt->execute();
     }
 
+
+
+    public function update(array $datos): bool
+    {
+        $stmt = $this->prepare("UPDATE states SET type_state = :type_state WHERE phone = :phone");
+        $stmt->bindValue(':phone', $datos['number']);
+        $stmt->bindValue(':type_state', $datos['type']);
+        return $stmt->execute();
+    }
 }
