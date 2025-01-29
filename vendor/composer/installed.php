@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'rogelio/chat_bot_mvc',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-Main',
+        'version' => 'dev-Main',
+        'reference' => '496d5784b93c3932f6fb6d1a2a9d2dce366783a2',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -29,9 +29,9 @@
             'dev_requirement' => false,
         ),
         'rogelio/chat_bot_mvc' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-Main',
+            'version' => 'dev-Main',
+            'reference' => '496d5784b93c3932f6fb6d1a2a9d2dce366783a2',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
