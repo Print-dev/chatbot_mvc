@@ -1,0 +1,17 @@
+{
+    "name": "rogelio/chat_bot_mvc",
+    "autoload": {
+        "psr-4": {
+            "Rogelio\\ChatBotMvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Print-dev",
+            "email": "alexisjkg@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
