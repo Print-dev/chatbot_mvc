@@ -10,3 +10,53 @@ Stack trace:
 [30-Jan-2025 00:27:30 Europe/Berlin] PHP Warning:  Undefined array key "PASSWORD" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 29
 [30-Jan-2025 00:27:30 Europe/Berlin] PHP Warning:  Undefined array key "CHARSET" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 30
 [30-Jan-2025 00:27:30 Europe/Berlin] Database::connect() -> SQLSTATE[HY000] [2019] Unknown character set
+[30-Jan-2025 01:30:39 Europe/Berlin] PHP Warning:  Undefined array key "HOST" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 26
+[30-Jan-2025 01:30:39 Europe/Berlin] PHP Warning:  Undefined array key "DB" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 27
+[30-Jan-2025 01:30:39 Europe/Berlin] PHP Warning:  Undefined array key "USER" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 28
+[30-Jan-2025 01:30:39 Europe/Berlin] PHP Warning:  Undefined array key "PASSWORD" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 29
+[30-Jan-2025 01:30:39 Europe/Berlin] PHP Warning:  Undefined array key "CHARSET" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 30
+[30-Jan-2025 01:30:39 Europe/Berlin] Database::connect() -> SQLSTATE[HY000] [2019] Unknown character set
+[30-Jan-2025 01:33:32 Europe/Berlin] PHP Warning:  Undefined array key "HOST" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 26
+[30-Jan-2025 01:33:32 Europe/Berlin] PHP Warning:  Undefined array key "DB" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 27
+[30-Jan-2025 01:33:32 Europe/Berlin] PHP Warning:  Undefined array key "USER" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 28
+[30-Jan-2025 01:33:32 Europe/Berlin] PHP Warning:  Undefined array key "PASSWORD" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 29
+[30-Jan-2025 01:33:32 Europe/Berlin] PHP Warning:  Undefined array key "CHARSET" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 30
+[30-Jan-2025 01:33:32 Europe/Berlin] Database::connect() -> SQLSTATE[HY000] [2019] Unknown character set
+[30-Jan-2025 01:33:33 Europe/Berlin] PHP Warning:  Undefined array key "HOST" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 26
+[30-Jan-2025 01:33:33 Europe/Berlin] PHP Warning:  Undefined array key "DB" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 27
+[30-Jan-2025 01:33:33 Europe/Berlin] PHP Warning:  Undefined array key "USER" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 28
+[30-Jan-2025 01:33:33 Europe/Berlin] PHP Warning:  Undefined array key "PASSWORD" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 29
+[30-Jan-2025 01:33:33 Europe/Berlin] PHP Warning:  Undefined array key "CHARSET" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 30
+[30-Jan-2025 01:33:33 Europe/Berlin] Database::connect() -> SQLSTATE[HY000] [2019] Unknown character set
+[30-Jan-2025 01:34:11 Europe/Berlin] PHP Warning:  Undefined array key "HOST" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 26
+[30-Jan-2025 01:34:11 Europe/Berlin] PHP Warning:  Undefined array key "DB" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 27
+[30-Jan-2025 01:34:11 Europe/Berlin] PHP Warning:  Undefined array key "USER" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 28
+[30-Jan-2025 01:34:11 Europe/Berlin] PHP Warning:  Undefined array key "PASSWORD" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 29
+[30-Jan-2025 01:34:11 Europe/Berlin] PHP Warning:  Undefined array key "CHARSET" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 30
+[30-Jan-2025 01:34:11 Europe/Berlin] Database::connect() -> SQLSTATE[HY000] [2019] Unknown character set
+[30-Jan-2025 01:34:14 Europe/Berlin] PHP Warning:  Undefined array key "HOST" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 26
+[30-Jan-2025 01:34:14 Europe/Berlin] PHP Warning:  Undefined array key "DB" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 27
+[30-Jan-2025 01:34:14 Europe/Berlin] PHP Warning:  Undefined array key "USER" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 28
+[30-Jan-2025 01:34:14 Europe/Berlin] PHP Warning:  Undefined array key "PASSWORD" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 29
+[30-Jan-2025 01:34:14 Europe/Berlin] PHP Warning:  Undefined array key "CHARSET" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 30
+[30-Jan-2025 01:34:14 Europe/Berlin] Database::connect() -> SQLSTATE[HY000] [2019] Unknown character set
+[30-Jan-2025 01:34:33 Europe/Berlin] Database::connect() -> SQLSTATE[HY000] [1049] Unknown database 'bot_w'
+[30-Jan-2025 01:35:15 Europe/Berlin] PHP Warning:  Undefined array key "body" in C:\xampp\htdocs\chatbot_mvc\webhook.php on line 34
+[30-Jan-2025 01:35:15 Europe/Berlin] PHP Warning:  Undefined array key "phone" in C:\xampp\htdocs\chatbot_mvc\webhook.php on line 39
+[30-Jan-2025 01:35:15 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Rogelio\ChatBotMvc\Controllers\HandleMessage::verifyState(): Argument #1 ($phone) must be of type string, null given, called in C:\xampp\htdocs\chatbot_mvc\webhook.php on line 39 and defined in C:\xampp\htdocs\chatbot_mvc\src\controllers\HandleMessage.php:23
+Stack trace:
+#0 C:\xampp\htdocs\chatbot_mvc\webhook.php(39): Rogelio\ChatBotMvc\Controllers\HandleMessage->verifyState(NULL)
+#1 {main}
+  thrown in C:\xampp\htdocs\chatbot_mvc\src\controllers\HandleMessage.php on line 23
+[30-Jan-2025 01:36:01 Europe/Berlin] PHP Warning:  Undefined array key "phone" in C:\xampp\htdocs\chatbot_mvc\webhook.php on line 36
+[30-Jan-2025 01:36:01 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Rogelio\ChatBotMvc\Controllers\HandleMessage::Input(): Argument #2 ($phone) must be of type string, null given, called in C:\xampp\htdocs\chatbot_mvc\webhook.php on line 36 and defined in C:\xampp\htdocs\chatbot_mvc\src\controllers\HandleMessage.php:16
+Stack trace:
+#0 C:\xampp\htdocs\chatbot_mvc\webhook.php(36): Rogelio\ChatBotMvc\Controllers\HandleMessage->Input('menu', NULL)
+#1 {main}
+  thrown in C:\xampp\htdocs\chatbot_mvc\src\controllers\HandleMessage.php on line 16
+[30-Jan-2025 01:36:03 Europe/Berlin] PHP Warning:  Undefined array key "phone" in C:\xampp\htdocs\chatbot_mvc\webhook.php on line 36
+[30-Jan-2025 01:36:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Rogelio\ChatBotMvc\Controllers\HandleMessage::Input(): Argument #2 ($phone) must be of type string, null given, called in C:\xampp\htdocs\chatbot_mvc\webhook.php on line 36 and defined in C:\xampp\htdocs\chatbot_mvc\src\controllers\HandleMessage.php:16
+Stack trace:
+#0 C:\xampp\htdocs\chatbot_mvc\webhook.php(36): Rogelio\ChatBotMvc\Controllers\HandleMessage->Input('menu', NULL)
+#1 {main}
+  thrown in C:\xampp\htdocs\chatbot_mvc\src\controllers\HandleMessage.php on line 16

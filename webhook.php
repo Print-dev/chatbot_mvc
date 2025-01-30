@@ -9,8 +9,8 @@ ini_set('error_log', './error_log.log');
 require_once 'vendor/autoload.php';
 
 // Si .env está en el mismo directorio que index.php
-//$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-//$dotenv->load();
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 use Rogelio\ChatBotMvc\Api\productsApi;
 use Rogelio\ChatBotMvc\Controllers\HandleMessage;
