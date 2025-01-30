@@ -14,6 +14,7 @@ require_once 'vendor/autoload.php';
 
 use Rogelio\ChatBotMvc\Api\productsApi;
 use Rogelio\ChatBotMvc\Controllers\HandleMessage;
+use Rogelio\ChatBotMvc\Features\Conversation\States\frequentQuestions;
 use Rogelio\ChatBotMvc\Features\Conversation\States\MainMenuState;
 use Rogelio\ChatBotMvc\Features\Conversation\States\pointSale;
 use Rogelio\ChatBotMvc\Features\Conversation\States\SearchProduct;
@@ -29,7 +30,7 @@ $handleMessageController = new HandleMessage($handleMessageService, $stateServic
 
 $productsApi = new productsApi();
 $pointSale = new PointSale();
-$searchProduct = new SearchProduct();
+$frecuentQuestions = new frequentQuestions();
 if($_POST['body'] == 'menu')
 {
     $handleMessageController->Input('menu', $_POST['phone']);
@@ -41,7 +42,7 @@ if($_POST['body'] == 'menu')
         // si es true, paso
         if($status == 'view_menu')
         {
-            $mainMenuState = new MainMenuState($productsApi, $stateRepository, $pointSale, $searchProduct);
+            $mainMenuState = new MainMenuState($productsApi, $stateRepository, $pointSale, $frecuentQuestions);
             $respuesta = $mainMenuState->handleInput($_POST['body'], $_POST['phone']);
             echo $respuesta['message'];
         }
