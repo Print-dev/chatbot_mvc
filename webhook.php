@@ -23,6 +23,7 @@ use Rogelio\ChatBotMvc\Repositorys\stateRepository;
 use Rogelio\ChatBotMvc\Services\handleMessageService;
 use Rogelio\ChatBotMvc\Services\stateService;
 use Rogelio\ChatBotMvc\Utils\whatsappCli;
+
 $whasapCli = new whatsappCli();
 $stateRepository = new stateRepository();
 $handleMessageService = new handleMessageService($whasapCli, $stateRepository);
@@ -32,35 +33,40 @@ $handleMessageController = new HandleMessage($handleMessageService, $stateServic
 $productsApi = new productsApi();
 $pointSale = new PointSale();
 $frecuentQuestions = new frequentQuestions();
-if($_POST['body'] == 'menu')
-{
+if ($_POST['body'] == 'menu') {
     $handleMessageController->Input('menu', $_POST['phone']);
-}else{
+} else {
     // Antes de enviar el mensaje del usuario a la entrada de la app, verificamos si hay un estado presente.
     $status = $handleMessageController->verifyState($_POST['phone']);
-    if($status)
-    {
+    if ($status) {
         // si es true, paso
-        if($status == 'view_menu')
-        {
+        if ($status == 'view_menu') {
             $mainMenuState = new MainMenuState($productsApi, $stateRepository, $pointSale, $frecuentQuestions);
             $respuesta = $mainMenuState->handleInput($_POST['body'], $_POST['phone']);
             echo $respuesta['message'];
         }
-        if($status == 'catalog_view')
-        {
+        if ($status == 'catalog_view') {
             $mainCatalogoState = new MainCatalogoState($productsApi, $stateRepository);
             $respuesta = $mainCatalogoState->handleInput($_POST['body'], $_POST['phone']);
             echo $respuesta['message'];
         }
 
-        if($status == 'search_initiated')
-        {
+        if ($status == 'search_initiated') {
             $mainSearchState = new SearchProduct($productsApi, $stateRepository);
             $respuesta = $mainCatalogoState->handleInput($_POST['body'], $_POST['phone']);
             echo $respuesta['message'];
         }
-    }else{
+
+        if ($status == 'points_view'){            
+            $respuesta = $mainCatalogoState->handleInput($_POST['body'], $_POST['phone']);
+            echo $respuesta['message'];
+        }
+
+        if ($status == 'questions_view'){
+            $respuesta = $mainCatalogoState->handleInput($_POST['body'], $_POST['phone']);
+            echo $respuesta['message'];
+        }
+    } else {
         $handleMessageController->Input('menu', $_POST['phone']);
     }
 }

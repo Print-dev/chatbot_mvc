@@ -60,3 +60,28 @@ Stack trace:
 #0 C:\xampp\htdocs\chatbot_mvc\webhook.php(36): Rogelio\ChatBotMvc\Controllers\HandleMessage->Input('menu', NULL)
 #1 {main}
   thrown in C:\xampp\htdocs\chatbot_mvc\src\controllers\HandleMessage.php on line 16
+[30-Jan-2025 02:25:33 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Rogelio\ChatBotMvc\Features\Conversation\States\MainCatalogoState::handleInput(): Return value must be of type array, none returned in C:\xampp\htdocs\chatbot_mvc\src\features\conversation\states\mainCatalogoState.php:47
+Stack trace:
+#0 C:\xampp\htdocs\chatbot_mvc\webhook.php(50): Rogelio\ChatBotMvc\Features\Conversation\States\MainCatalogoState->handleInput('2', '936439733')
+#1 {main}
+  thrown in C:\xampp\htdocs\chatbot_mvc\src\features\conversation\states\mainCatalogoState.php on line 47
+[30-Jan-2025 02:26:31 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Rogelio\ChatBotMvc\Features\Conversation\States\MainCatalogoState::handleInput(): Return value must be of type array, none returned in C:\xampp\htdocs\chatbot_mvc\src\features\conversation\states\mainCatalogoState.php:47
+Stack trace:
+#0 C:\xampp\htdocs\chatbot_mvc\webhook.php(50): Rogelio\ChatBotMvc\Features\Conversation\States\MainCatalogoState->handleInput('3', '936439733')
+#1 {main}
+  thrown in C:\xampp\htdocs\chatbot_mvc\src\features\conversation\states\mainCatalogoState.php on line 47
+[30-Jan-2025 02:26:41 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Rogelio\ChatBotMvc\Features\Conversation\States\MainCatalogoState::handleInput(): Return value must be of type array, none returned in C:\xampp\htdocs\chatbot_mvc\src\features\conversation\states\mainCatalogoState.php:47
+Stack trace:
+#0 C:\xampp\htdocs\chatbot_mvc\webhook.php(50): Rogelio\ChatBotMvc\Features\Conversation\States\MainCatalogoState->handleInput('4', '936439733')
+#1 {main}
+  thrown in C:\xampp\htdocs\chatbot_mvc\src\features\conversation\states\mainCatalogoState.php on line 47
+[30-Jan-2025 02:26:53 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Rogelio\ChatBotMvc\Features\Conversation\States\MainCatalogoState::handleInput(): Return value must be of type array, none returned in C:\xampp\htdocs\chatbot_mvc\src\features\conversation\states\mainCatalogoState.php:47
+Stack trace:
+#0 C:\xampp\htdocs\chatbot_mvc\webhook.php(50): Rogelio\ChatBotMvc\Features\Conversation\States\MainCatalogoState->handleInput('4', '936439733')
+#1 {main}
+  thrown in C:\xampp\htdocs\chatbot_mvc\src\features\conversation\states\mainCatalogoState.php on line 47
+[30-Jan-2025 03:04:11 Europe/Berlin] PHP Warning:  Undefined variable $mainCatalogoState in C:\xampp\htdocs\chatbot_mvc\webhook.php on line 61
+[30-Jan-2025 03:04:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function handleInput() on null in C:\xampp\htdocs\chatbot_mvc\webhook.php:61
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\chatbot_mvc\webhook.php on line 61

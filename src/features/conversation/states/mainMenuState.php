@@ -27,11 +27,13 @@ class MainMenuState {
 
             case '3': // Punto de venta
                 $message = $this->pointSale->getInformation();
+                $this->stateRepository->update(['phone' => $phone, 'type' => 'points_view']);
                 return ['message' => $message];
 
 
             case '4': // Preguntas frecuentes
                 $message = $this->frequentQuestions->getInformation();
+                $this->stateRepository->update(['phone' => $phone, 'type' => 'questions_view']);
                 return ['message' => $message];
             default:
                 return ['message' => "Opción inválida. Intente nuevamente."];
