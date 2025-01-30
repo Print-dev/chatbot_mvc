@@ -3,7 +3,7 @@
         'name' => 'rogelio/chat_bot_mvc',
         'pretty_version' => 'dev-Main',
         'version' => 'dev-Main',
-        'reference' => '496d5784b93c3932f6fb6d1a2a9d2dce366783a2',
+        'reference' => '15910303f3c86742803cc5a0249186cf18c35039',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'rogelio/chat_bot_mvc' => array(
             'pretty_version' => 'dev-Main',
             'version' => 'dev-Main',
-            'reference' => '496d5784b93c3932f6fb6d1a2a9d2dce366783a2',
+            'reference' => '15910303f3c86742803cc5a0249186cf18c35039',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -11,7 +11,6 @@ class stateRepository extends Model
     {
         parent::__construct();
     }
-
     public function find(string $phone): array|bool
     {
         $stmt = $this->prepare("SELECT type_state FROM states WHERE phone = :phone LIMIT 1");
