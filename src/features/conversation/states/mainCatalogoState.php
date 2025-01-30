@@ -67,7 +67,7 @@ class MainCatalogoState
 
         $response[] = "\n-------------------------------------";
         $response[] = "*ACCIONES DISPONIBLES:*";
-        $response[] = "1. Ver detalles/fotos ➡️ Escriba el *ID* del producto";
+        $response[] = "1. Ver detalles(fotos y realizar pedido) ➡️ Escriba el *ID* del producto";
         $response[] = "2. Volver al catálogo 📂 Escriba 'catalogo'";
         $response[] = "3. Menú principal 🏠 Escriba 'menu'";
         $response[] = "\n🔍 ¿No ves tu producto? Escribe 'buscar producto' para buscar en esta categoría";

@@ -23,8 +23,19 @@ class MainMenuState {
     
             case '2': // Buscar producto
                 $this->stateRepository->update(['phone' => $phone, 'type' => 'search_initiated']);
-                return ['message' => "Por favor ingrese el término de búsqueda:"];
-
+                return ['message' => implode("\n", [
+                    "🔍 *BÚSQUEDA DE PRODUCTOS* 🔍",
+                    "-------------------------------------",
+                    "Por favor, escribe *el nombre completo* del producto que deseas buscar:",
+                    "",
+                    "📌 Ejemplos:",
+                    "• \"Monitor Dell 20 pulgadas\"",
+                    "• \"Impresora HP LaserJet\"",
+                    "• \"Teclado mecánico RGB\"",
+                    "",
+                    "💡 *Consejo:* Cuanto más específico seas, mejores resultados obtendrás!",
+                    "🚪 Para volver al menú escribe 'menu'"
+                ])];
             case '3': // Punto de venta
                 $message = $this->pointSale->getInformation();
                 $this->stateRepository->update(['phone' => $phone, 'type' => 'points_view']);

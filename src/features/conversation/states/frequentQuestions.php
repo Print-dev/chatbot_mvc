@@ -28,6 +28,8 @@ class frequentQuestions
 
             🔹 ¿Qué métodos de pago acepta el sistema? 💳💵
             Soporta pagos en efectivo, tarjeta y transferencias, dependiendo de la configuración.
+
+            Para regresar, por favor escriba menu.
         EOD;
     }
 }

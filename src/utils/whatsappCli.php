@@ -13,19 +13,42 @@ class whatsappCli {
     {
         echo <<<EOD
 
-        🌟 *TIENDA VIRTUAL* 🌟
-        ========================
-        
-        📋 *Menú Principal*
-        
-        1. 📚 Ver Catálogo Completo
-        2. 🔍 Buscar Producto
-        3.  Punto de venta
-        4.  Preguntras frecuentes      
-        _Envía el número de la opción deseada_
-        ========================
-        🛍️ ¡Encuentra tus productos favoritos! 🛍️
-        
+        ✨🛒 *BIENVENIDO A LA TIENDA VIRTUAL* 🛍️✨
+        ═══════════════════════════════
+
+        📌 *MENÚ PRINCIPAL*
+
+        1. 📚 _Catálogo Completo_
+        2. 🔍 _Búsqueda de Productos_
+        3. 💻 _Puntos de Venta_
+        4. ❓ _Preguntas Frecuentes_
+
+        _Escribe el número de la opción (1-4)_
+
+        ═══════════════════════════════
+        🎁 ¡Encuentra ofertas increíbles! 
+        💰 Los mejores precios garantizados
+        EOD;
+    }
+    public function renderSearchProduct()
+    {
+        echo <<<EOD
+            🔍 *BÚSQUEDA DE PRODUCTOS* 🔍
+            ═══════════════════════════════
+
+            Por favor, escribe *el nombre completo* del producto que deseas buscar:
+
+            📌 Ejemplos:
+            • "Monitor Dell 20 pulgadas"
+            • "Impresora HP LaserJet"
+            • "Teclado mecánico RGB"
+
+            💡 *Consejo:* Cuanto más específico seas, mejores resultados obtendrás!
+            🚪 Para voler al menú escribe 'menu'
+
+            ═══════════════════════════════
+            🎁 ¡Encuentra lo que necesitas! 
+            🔎 Búsqueda rápida y precisa
         EOD;
     }
 }

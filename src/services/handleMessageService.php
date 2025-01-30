@@ -18,6 +18,9 @@ class handleMessageService
         if (!$userExist) {
             // Solo añade si el usuario no existe
             $this->stateRepository->add(['phone' => $phone, 'type' => $stateType]);
+        }else{
+            // actualizamos nada mas
+            $this->stateRepository->update(['phone' => $phone, 'type' => $stateType]);
         }
 
         $this->whatsappCli->renderMenu();

@@ -52,19 +52,29 @@ if ($_POST['body'] == 'menu') {
         }
 
         if ($status == 'search_initiated') {
+
             $mainSearchState = new SearchProduct($productsApi, $stateRepository);
-            $respuesta = $mainSearchState->handleInput($_POST['body'], $_POST['phone']);
-            echo $respuesta['message'];
+
+            $input = strtolower($_POST['body']); // Convertir a minúsculas para hacer la comparación insensible a mayúsculas
+            $keyword = 'buscar producto';
+        
+            // Verificar si la palabra clave está en el input
+            if (stripos($input, $keyword) !== false) {
+                $whasapCli->renderSearchProduct();
+            } else{
+                $respuesta = $mainSearchState->handleInput($_POST['body'], $_POST['phone']);
+                echo $respuesta['message'];
+            }
         }
 
-        if ($status == 'points_view'){            
-            $respuesta = $mainCatalogoState->handleInput($_POST['body'], $_POST['phone']);
-            echo $respuesta['message'];
+        if ($status == 'points_view'){     
+            $pointSale = new pointSale();     
+            $respuesta = $pointSale->getInformation();
         }
 
         if ($status == 'questions_view'){
-            $respuesta = $mainCatalogoState->handleInput($_POST['body'], $_POST['phone']);
-            echo $respuesta['message'];
+            $questionsFrec = new frequentQuestions();
+            $questionsFrec->getInformation();
         }
     } else {
         $handleMessageController->Input('menu', $_POST['phone']);
