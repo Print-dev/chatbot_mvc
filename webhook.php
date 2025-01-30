@@ -15,6 +15,7 @@ $dotenv->load();
 use Rogelio\ChatBotMvc\Api\productsApi;
 use Rogelio\ChatBotMvc\Controllers\HandleMessage;
 use Rogelio\ChatBotMvc\Features\Conversation\States\frequentQuestions;
+use Rogelio\ChatBotMvc\Features\Conversation\States\MainCatalogoState;
 use Rogelio\ChatBotMvc\Features\Conversation\States\MainMenuState;
 use Rogelio\ChatBotMvc\Features\Conversation\States\pointSale;
 use Rogelio\ChatBotMvc\Features\Conversation\States\SearchProduct;
@@ -46,14 +47,18 @@ if($_POST['body'] == 'menu')
             $respuesta = $mainMenuState->handleInput($_POST['body'], $_POST['phone']);
             echo $respuesta['message'];
         }
-        if($status == 'view_catalog')
+        if($status == 'catalog_view')
         {
-    
+            $mainCatalogoState = new MainCatalogoState($productsApi, $stateRepository);
+            $respuesta = $mainCatalogoState->handleInput($_POST['body'], $_POST['phone']);
+            echo $respuesta['message'];
         }
 
         if($status == 'search_initiated')
         {
-    
+            $mainSearchState = new SearchProduct($productsApi, $stateRepository);
+            $respuesta = $mainCatalogoState->handleInput($_POST['body'], $_POST['phone']);
+            echo $respuesta['message'];
         }
     }else{
         $handleMessageController->Input('menu', $_POST['phone']);

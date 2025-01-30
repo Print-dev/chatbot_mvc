@@ -59,8 +59,7 @@ class productsApi
         // Decodificar la respuesta JSON
         $responseData = json_decode($response, true);
         curl_close($ch);
-        error_log(print_r($responseData, true));
-        return $responseData ?? null;
+        return $responseData ?? [];
     }
 
     public function getProductById($id, $category)
