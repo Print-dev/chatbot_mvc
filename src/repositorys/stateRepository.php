@@ -14,14 +14,14 @@ class stateRepository extends Model
 
     public function find(string $phone): array|bool
     {
-        $stmt = $this->prepare("SELECT id, type_state, phone FROM states WHERE phone = :phone LIMIT 1");
+        $stmt = $this->prepare("SELECT type_state FROM states WHERE phone = :phone LIMIT 1");
         $stmt->bindValue(':phone', $phone);
         $stmt->execute();
         
         if ($stmt->rowCount() == 1) {
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
-        return false;
+        return [];
     }
 
     /**
@@ -30,7 +30,7 @@ class stateRepository extends Model
     public function add(array $datos): bool
     {
         $stmt = $this->prepare("INSERT INTO states (type_state, phone) VALUES (:type_state, :phone)");
-        $stmt->bindValue(':phone', $datos['number']);
+        $stmt->bindValue(':phone', $datos['phone']);
         $stmt->bindValue(':type_state', $datos['type']);
         return $stmt->execute();
     }
@@ -41,7 +41,7 @@ class stateRepository extends Model
     public function update(array $datos): bool
     {
         $stmt = $this->prepare("UPDATE states SET type_state = :type_state WHERE phone = :phone");
-        $stmt->bindValue(':phone', $datos['number']);
+        $stmt->bindValue(':phone', $datos['phone']);
         $stmt->bindValue(':type_state', $datos['type']);
         return $stmt->execute();
     }

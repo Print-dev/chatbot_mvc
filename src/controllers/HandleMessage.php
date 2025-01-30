@@ -16,7 +16,7 @@ class HandleMessage
     public function Input(string $message, string $phone)
     {
         // hacemos que service, maneje la logica de negocio
-        return $this->handleMessageService->handleInput($message, $$phone);
+        return $this->handleMessageService->handleInput($message, $phone);
     }
 
     // verificar si existe estado
@@ -24,12 +24,7 @@ class HandleMessage
     {
         // primero verifica en un servicio, si hay un estado
         $state = $this->stateService->getState($phone);
-
-        if(!$state)
-        {
-            // return false
-        }
-        // return true
+        return $state['type_state'] ?? false;
     }
 
     // 
