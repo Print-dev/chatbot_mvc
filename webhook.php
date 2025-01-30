@@ -57,7 +57,7 @@ if($_POST['body'] == 'menu')
         if($status == 'search_initiated')
         {
             $mainSearchState = new SearchProduct($productsApi, $stateRepository);
-            $respuesta = $mainCatalogoState->handleInput($_POST['body'], $_POST['phone']);
+            $respuesta = $mainSearchState->handleInput($_POST['body'], $_POST['phone']);
             echo $respuesta['message'];
         }
     }else{

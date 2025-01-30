@@ -49,7 +49,7 @@ class MainCatalogoState
     private function formatProductResponse(array $products, string $title): array 
     {
         if (empty($products)) {
-            return ['message' => "⚠️ No hay productos disponibles en esta categoría en este momento."];
+            return ['message' => "⚠️ No hay productos disponibles en la categoría " . $title . " en este momento."];
         }
 
         $response = [
