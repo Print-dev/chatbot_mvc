@@ -6,7 +6,7 @@ use Rogelio\ChatBotMvc\Api\productsApi;
 use Rogelio\ChatBotMvc\Repositorys\stateRepository;
 
 class MainMenuState {
-    public function __construct(protected productsApi $productApi, protected stateRepository $stateRepository, protected pointSale $pointSale, protected SearchProduct $searchProduct) {
+    public function __construct(protected productsApi $productApi, protected stateRepository $stateRepository, protected pointSale $pointSale, protected frequentQuestions $frequentQuestions) {
         
     }
 
@@ -31,7 +31,7 @@ class MainMenuState {
 
 
             case '4': // Preguntas frecuentes
-                $message = $this->searchProduct->getInformation();
+                $message = $this->frequentQuestions->getInformation();
                 return ['message' => $message];
             default:
                 return ['message' => "Opción inválida. Intente nuevamente."];
