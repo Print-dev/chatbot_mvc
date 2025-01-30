@@ -1,0 +1,12 @@
+[30-Jan-2025 00:27:07 Europe/Berlin] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read any of the environment file(s) at [C:\xampp\htdocs\chatbot_mvc\.env]. in C:\xampp\htdocs\chatbot_mvc\vendor\vlucas\phpdotenv\src\Store\FileStore.php:68
+Stack trace:
+#0 C:\xampp\htdocs\chatbot_mvc\vendor\vlucas\phpdotenv\src\Dotenv.php(222): Dotenv\Store\FileStore->read()
+#1 C:\xampp\htdocs\chatbot_mvc\webhook.php(13): Dotenv\Dotenv->load()
+#2 {main}
+  thrown in C:\xampp\htdocs\chatbot_mvc\vendor\vlucas\phpdotenv\src\Store\FileStore.php on line 68
+[30-Jan-2025 00:27:30 Europe/Berlin] PHP Warning:  Undefined array key "HOST" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 26
+[30-Jan-2025 00:27:30 Europe/Berlin] PHP Warning:  Undefined array key "DB" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 27
+[30-Jan-2025 00:27:30 Europe/Berlin] PHP Warning:  Undefined array key "USER" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 28
+[30-Jan-2025 00:27:30 Europe/Berlin] PHP Warning:  Undefined array key "PASSWORD" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 29
+[30-Jan-2025 00:27:30 Europe/Berlin] PHP Warning:  Undefined array key "CHARSET" in C:\xampp\htdocs\chatbot_mvc\src\database\Database.php on line 30
+[30-Jan-2025 00:27:30 Europe/Berlin] Database::connect() -> SQLSTATE[HY000] [2019] Unknown character set
