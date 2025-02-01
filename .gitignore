@@ -2,3 +2,4 @@
 composer.lock   
 .history
 error_log.log
+vendor/

@@ -1,9 +1,7 @@
 <?php
-
-namespace Rogelio\ChatBotMvc\Repositorys;
-
 use PDO;
-use Rogelio\ChatBotMvc\Database\Model;
+
+require_once '../database/model.php';
 
 class stateRepository extends Model
 {
@@ -13,7 +11,7 @@ class stateRepository extends Model
     }
     public function find(string $phone): array|bool
     {
-        $stmt = $this->prepare("SELECT type_state FROM states WHERE phone = :phone LIMIT 1");
+        $stmt = $this->prepare("SELECT type_state, additional_info FROM states WHERE phone = :phone LIMIT 1");
         $stmt->bindValue(':phone', $phone);
         $stmt->execute();
         
@@ -29,8 +27,8 @@ class stateRepository extends Model
     public function add(array $datos): bool
     {
         $stmt = $this->prepare("INSERT INTO states (type_state, phone) VALUES (:type_state, :phone)");
-        $stmt->bindValue(':phone', $datos['phone']);
-        $stmt->bindValue(':type_state', $datos['type']);
+        $stmt->bindValue(':phone', $datos['phone']) ?? '';
+        $stmt->bindValue(':type_state', $datos['type'] ?? '');
         return $stmt->execute();
     }
 
@@ -39,9 +37,10 @@ class stateRepository extends Model
      */
     public function update(array $datos): bool
     {
-        $stmt = $this->prepare("UPDATE states SET type_state = :type_state WHERE phone = :phone");
-        $stmt->bindValue(':phone', $datos['phone']);
-        $stmt->bindValue(':type_state', $datos['type']);
+        $stmt = $this->prepare("UPDATE states SET type_state = :type_state , additional_info = :additional_info  WHERE phone = :phone");
+        $stmt->bindValue(':phone', $datos['phone']) ?? '';
+        $stmt->bindValue(':type_state', $datos['type'] ?? '');
+        $stmt->bindValue(':additional_info', $datos['additional_info'] ?? '');
         return $stmt->execute();
     }
 }

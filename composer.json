@@ -2,7 +2,7 @@
     "name": "rogelio/chat_bot_mvc",
     "autoload": {
         "psr-4": {
-            "Rogelio\\ChatBotMvc\\": "src/"
+            "App\\": "app/"
         }
     },
     "authors": [
@@ -12,6 +12,7 @@
         }
     ],
     "require": {
+        "twilio/sdk": "^8.3",
         "vlucas/phpdotenv": "^5.6"
     }
 }

@@ -1,9 +1,8 @@
 <?php
 
-namespace Rogelio\ChatBotMvc\Features\Conversation\States;
 
-use Rogelio\ChatBotMvc\Api\productsApi;
-use Rogelio\ChatBotMvc\Repositorys\stateRepository;
+require_once '../../../api/productsApi.php';
+require_once '../../../repositorys/stateRepository.php';
 
 class MainMenuState {
     public function __construct(protected productsApi $productApi, protected stateRepository $stateRepository, protected pointSale $pointSale, protected frequentQuestions $frequentQuestions) {

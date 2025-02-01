@@ -1,6 +1,5 @@
 <?php
 
-namespace Rogelio\ChatBotMvc\Database;
 
 use PDO;
 use PDOException;

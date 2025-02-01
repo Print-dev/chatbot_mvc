@@ -1,10 +1,7 @@
 <?php
 
-namespace Rogelio\ChatBotMvc\Services;
-
-use Rogelio\ChatBotMvc\Repositorys\stateRepository;
-use Rogelio\ChatBotMvc\Utils\whatsappCli;
-
+require_once '../repositorys/stateRepository.php';
+require_once '../utils/whatsappCli.php';
 class handleMessageService
 {
     public function __construct(protected whatsappCli $whatsappCli, protected stateRepository $stateRepository) {}

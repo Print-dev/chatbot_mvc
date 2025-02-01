@@ -1,7 +1,5 @@
 <?php
 
-namespace Rogelio\ChatBotMvc\Api;
-
 class productsApi
 {
     public function __construct()
@@ -82,14 +80,14 @@ class productsApi
         if (curl_errno($ch)) {
             echo 'Error en cURL: ' . curl_error($ch);
             curl_close($ch);
-            return null;
+            return [];
         }
 
         // Decodificar la respuesta JSON
         $responseData = json_decode($response, true);
         curl_close($ch);
         error_log(print_r($responseData, true));
-        return $responseData ?? null;
+        return $responseData ?? [];
     }
 
     public function getProductByName($name)

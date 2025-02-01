@@ -1,8 +1,6 @@
 <?php
 
-namespace Rogelio\ChatBotMvc\Services;
-
-use Rogelio\ChatBotMvc\Repositorys\stateRepository;
+require_once '../repositorys/stateRepository.php';
 
 class stateService
 {

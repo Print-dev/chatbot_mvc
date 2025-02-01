@@ -1,7 +1,5 @@
 <?php
 
-namespace Rogelio\ChatBotMvc\Utils;
-
 class whatsappCli {
 
     public function __construct()

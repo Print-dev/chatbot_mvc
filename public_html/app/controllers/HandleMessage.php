@@ -1,9 +1,7 @@
 <?php
 
-namespace Rogelio\ChatBotMvc\Controllers;
-
-use Rogelio\ChatBotMvc\Services\handleMessageService;
-use Rogelio\ChatBotMvc\Services\stateService;
+require_once '../services/handleMessageService.php';
+require_once '../services/stateService.php';
 
 class HandleMessage 
 {
@@ -24,7 +22,7 @@ class HandleMessage
     {
         // primero verifica en un servicio, si hay un estado
         $state = $this->stateService->getState($phone);
-        return $state['type_state'] ?? false;
+        return $state ?? false;
     }
 
     // 

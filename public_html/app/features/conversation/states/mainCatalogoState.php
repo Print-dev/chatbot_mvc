@@ -1,9 +1,7 @@
 <?php
 
-namespace Rogelio\ChatBotMvc\Features\Conversation\States;
-
-use Rogelio\ChatBotMvc\Api\productsApi;
-use Rogelio\ChatBotMvc\Repositorys\stateRepository;
+require_once '../../../api/productsApi.php';
+require_once '../../../repositorys/stateRepository.php';
 
 class MainCatalogoState
 {
@@ -42,7 +40,7 @@ class MainCatalogoState
         }
 
         $products = $this->productApi->getProductsByCategory($product);
-        $this->stateRepository->update(['phone' => $phone, 'type' => 'catalog_product_view']);
+        $this->stateRepository->update(['phone' => $phone, 'type' => 'catalog_product_view', 'additional_info' => $product]);
         return $this->formatProductResponse($products, $product);
     }
 

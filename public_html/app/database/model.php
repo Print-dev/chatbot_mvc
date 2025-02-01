@@ -1,8 +1,7 @@
 <?php
 
-namespace Rogelio\ChatBotMvc\Database;
 
-use Rogelio\ChatBotMvc\Database\Database;
+require_once './Database.php';
 
 class Model {
     protected $modelo;
